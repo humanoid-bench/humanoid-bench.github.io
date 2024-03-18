@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8D3BBNGXC9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8D3BBNGXC9');
+  </script>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .video-carousel {
+      width: 90%; /* Adjust as needed */
+      height: 200px; /* Adjust as needed */
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      margin-left: 5%; /* Add space on the left side */
+      font-size: 0;
+  }
+
+  .video-carousel-end {
+      width: 90%; /* Adjust as needed */
+      height: 200px; /* Adjust as needed */
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      margin-left: 5%; /* Add space on the left side */
+      font-size: 0;
+  }
+  
+    .video-slide {
+      width: 210px; /* 1/5 of the container */
+      height: 100%;
+      margin: 0;
+      padding: 0;
+  
+  }
+
+  .video-slide-end {
+      width: 210px; /* 1/5 of the container */
+      height: 100%;
+      margin: 0;
+      padding: 0;
+  
+  }
+
+    .teaser-image {
+      /* up space */
+      display: block; /* Ensures image takes up full width of its container */
+      max-width: 100%; /* Ensures image doesn't exceed its container width */
+      height: auto; /* Preserves aspect ratio of the image */
+  }
+
+
+  
+  @keyframes slide {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+  
+
+
+  </style>
+
+  <title>HumanoidBench</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+</head>
+<body>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://sferrazza.cc/" target="_blank">Carmelo Sferrazza<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a target="_blank">Dun-Ming Huang<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://xingyu-lin.github.io" target="_blank">Xingyu Lin<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://youngwoon.github.io" target="_blank">Youngwoon Lee<sup>1,2</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.eecs.berkeley.edu/~pabbeel/" target="_blank">Pieter Abbeel<sup>1</sup></a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of California Berkeley, <sup>2</sup> Yonsei University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a target="_blank" class="button is-normal is-rounded is-dark">
+                  <!-- href="https://arxiv.org/abs/2309.13037" -->
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (coming soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a class="button is-normal is-rounded is-dark">
+                   <!-- href="https://github.com/wuphilipp/gello_software"> -->
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="video-carousel">
+    <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/trailer/Twalk.mp4" type="video/mp4">
+    </video>
+    <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/trailer/Dpush.mp4" type="video/mp4">
+    </video>
+    <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/trailer/Dcrawl.mp4" type="video/mp4">
+    </video>
+    <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/trailer/Dbookshelf.mp4" type="video/mp4">
+    </video>
+    <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/trailer/Tsit.mp4" type="video/mp4">
+    </video>
+    <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/trailer/Dhighbarsimple.mp4" type="video/mp4">
+    </video>
+    <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/trailer/Dstair.mp4" type="video/mp4">
+    </video>
+    <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/trailer/Tbalance.mp4" type="video/mp4">
+    </video>
+    <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/trailer/Tcubes.mp4" type="video/mp4">
+    </video>
+    <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/trailer/Tbasketball.mp4" type="video/mp4">
+    </video>
+    <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/trailer/Tpole.mp4" type="video/mp4">
+    </video>
+    <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/trailer/Tstand.mp4" type="video/mp4">
+    </video>
+    <video class="video-slide" playsinline autoplay loop muted>
+        <source src="./static/videos/trailer/Twindow.mp4" type="video/mp4">
+    </video>
+  </div>
+
+
+<!-- </div> -->
+<script src="./static/js/rolling-video.js"></script>
+<script src="./static/js/rolling-video-end.js"></script>
+<section class="hero is-light">
+  <br>
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column" style="padding: 0 40px;">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Humanoid robots hold great promise in assisting humans in diverse environments and tasks, due to their flexibility and adaptability leveraging human-like morphology. However, research in humanoid robots is often bottlenecked by the costly and fragile hardware setups. To accelerate algorithmic research in humanoid robots, we present a high-dimensional, simulated robot learning benchmark, HumanoidBench, featuring a humanoid robot equipped with dexterous hands and a variety of challenging whole-body manipulation and locomotion tasks. Our findings reveal that state-of-the-art reinforcement learning algorithms struggle with most tasks, whereas a hierarchical learning baseline achieves superior performance when supported by robust low-level policies, such as walking or reaching. With HumanoidBench, we provide the robotics community with a platform to identify the challenges arising when solving diverse tasks with humanoid robots, facilitating prompt verification of algorithms and ideas.
+          </p><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section has-text-justified">
+  <div class="container is-max-desktop">
+    <!--/ Method. -->
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">HumanoidBench</h2>
+      </div>
+    </div>
+    HumanoidBench is the first-of-its-kind simulated humanoid robot benchmark, including <b> 27 distinct whole-body control tasks,</b> each of these presenting unique challenges, such as intricate long-horizon control and sophisticated coordination.
+    <br> <br> <br>
+    <h2 class="subtitle is-4" style="text-align: center;">Locomotion</h2> 
+    <div class="column is-centered">
+      <img src="./static/images/locomotion.png" alt="teaser" class="teaser-image">
+    </div>
+    <br>
+    <br>
+    <h2 class="subtitle is-4" style="text-align: center;">"Static" Manipulation</h2> 
+    <div class="column is-centered">
+      <img src="./static/images/static_manipulation.png" alt="teaser" class="teaser-image">
+    </div>
+    <br>
+    <br>
+    <h2 class="subtitle is-4" style="text-align: center;">"Dynamic" Manipulation</h2> 
+    <div class="column is-centered">
+      <img src="./static/images/dynamic_manipulation.png" alt="teaser" class="teaser-image">
+    </div>
+    <hr>
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">Simulation Environment</h2>
+      </div>
+    </div>
+    The simulation environment of HumanoidBench uses the MuJoCo physics engine, featuring the choice across different robot models (e.g, Unitree H1, Agility Robotics Digit) and end effectors (e.g., Shadow Hand, Robotiq 2F-85 gripper). In our experiments, we opt for the Unitree H1 humanoid robot with two dexterous Shadow Hands attached to its arms. 
+    <br> <br>
+    <div class="columns is-multiline">
+      <div class="column is-12">
+        <h2 class="title is-5">Observation Space</h2>
+      </div>
+    </div>
+    Our simulated environment supports the following observations:
+    <ul style="list-style-type:disc" margin-above: 10px>
+        <li>Proprioceptive robot state (i.e. joint angles and velocities) and task-relevant environment observations (i.e. object poses and velocities).</li>
+        <li>Egocentric visual observations from two cameras placed on the robot head.</li>
+        <li>Whole-body tactile sensing using the MuJoCo tactile grid sensor. We design tactile sensing at the hands with high resolution and in other body parts with low resolution, similar to humans, with a total of $448$ taxels spread over the entire body, each providing three-dimensional contact force readings.</li>
+    </ul>
+    <div>
+      <img src="./static/images/sensors.jpeg" alt="teaser" class="teaser-image" style="width: 100%">
+    </div>
+    <div class="video_grid_item">
+      <video class="grid-video training" autoplay muted loop playsinline width="100%">
+        <source src="./static/videos/tactile_video.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <hr>
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">Hierarchical Reinforcement Learning</h2>
+      </div>
+    </div>
+    <p>
+    We benchmark a variety state-of-the-art reinforcement learning algorihtms on all tasks. Our results show how these end-to-end (flat) algorithms struggle with controlling the complex humanoid robot dynamics and solving the most challenging tasks. In fact, many of such tasks require long-horizon planning and necessitate acquiring a diverse set of skills (e.g., balancing, walking, reaching, etc.) to successfully achieve the desired objective.
+    </p>
+    <br>
+    <p>
+    We argue that these issues can be mitigated by introducing additional structure into the learning problem. In particular, we explore a hierarchical learning paradigm, where one or multiple low-level skill policies are provided to a high-level planning policy that sends setpoints to lower-level policies.
+    </p>
+    <br>
+    <p>
+      As an example, in the <span style="font-family: 'Courier New', monospace;">push</span> task we use a one-hand reaching policy (trained with massively parallelized PPO using MuJoCo MJX) as a low-level skill, which allows the robot to reach a 3D point in space with its left hand. 
+    </p>
+    <br>
+    <div>
+    <div style="width: 45%; float: left;">
+      <img src="./static/images/hierarchical.png" alt="teaser" class="teaser-image" >
+    </div>
+    <div style="width: 55%; float: right;">
+      <div class="columns is-centered">
+        <h2 class="subtitle is-4"><span style="font-family: 'Courier New', monospace;">push</span> </h2>
+      </div>
+      <img src="./static/images/hierarchy.png" alt="teaser" class="teaser-image" >
+    </div>
+    </div>
+    <div style="clear: both;"></div>
+    
+    <div>
+      <div style="width: 49%; float: left;">
+        <div class="video_grid_item">
+          <video class="grid-video training" autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/reaching_one.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="is-centered">
+          <p style="text-align: center;">Low-level reaching policy (left hand)</p>
+        </div>
+      </div>
+      <div style="width: 49%; float: right;">
+          <div class="video_grid_item">
+            <video class="grid-video training" autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/reaching_two.mp4" type="video/mp4">
+            </video>
+            <div class="is-centered">
+              <p style="text-align: center;">Low-level reaching policy (two hands)</p>
+            </div>
+          </div>
+      </div>
+      </div>
+      <div style="clear: both;"></div>
+    <hr>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">Vast Opportunities for Future Research!</h2>
+      </div>
+    </div>
+    <p>With HumanoidBench, we set a high bar with complex everyday tasks, in the hope to stimulate the community to accelerate the development of whole-body algorithms for humanoid robots with high-dimensional observation and action spaces.</p>
+    <br>
+    <p>Many of the tasks are still unsolved &mdash; the videos below show a non-exhaustive collection of failure modes.</p>
+
+  </div>
+</section>
+
+<div class="video-carousel-end">
+  <video class="video-slide-end" playsinline autoplay loop muted>
+      <source src="./static/videos/trailer/failures/Dhighbar.mp4" type="video/mp4">
+  </video>
+  <video class="video-slide-end" playsinline autoplay loop muted>
+      <source src="./static/videos/trailer/failures/Tinsert.mp4" type="video/mp4">
+  </video>
+  <video class="video-slide-end" playsinline autoplay loop muted>
+      <source src="./static/videos/trailer/failures/Dhurdle.mp4" type="video/mp4">
+  </video>
+  <video class="video-slide-end" playsinline autoplay loop muted>
+      <source src="./static/videos/trailer/failures/Tdoor.mp4" type="video/mp4">
+  </video>
+  <video class="video-slide-end" playsinline autoplay loop muted>
+      <source src="./static/videos/trailer/failures/Tspoon.mp4" type="video/mp4">
+  </video>
+  <video class="video-slide-end" playsinline autoplay loop muted>
+      <source src="./static/videos/trailer/failures/Tpowerlift.mp4" type="video/mp4">
+  </video>
+  <video class="video-slide-end" playsinline autoplay loop muted>
+      <source src="./static/videos/trailer/failures/Dtruck.mp4" type="video/mp4">
+  </video>
+  <video class="video-slide-end" playsinline autoplay loop muted>
+      <source src="./static/videos/trailer/failures/Tcabinet.mp4" type="video/mp4">
+  </video>
+  <video class="video-slide-end" playsinline autoplay loop muted>
+      <source src="./static/videos/trailer/failures/Dkitchen.mp4" type="video/mp4">
+  </video>
+</div>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="titile">BibTeX</h2>
+    <pre><code>@misc{sferrazza2024humanoidbench,
+    title={HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation},
+    author={Carmelo Sferrazza and Dun-Ming Huang and Xingyu Lin and Youngwoon Lee and Pieter Abbeel},
+    year={2024},
+}</code></pre>
+  </div>
+</section>
+
+<footer class="custom_footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, <a href="https://xingyu-lin.github.io/spawnnet/">SpawnNet</a>, and <a href="https://wuphilipp.github.io/gello_site/">Gello</a>.
+          </p><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
